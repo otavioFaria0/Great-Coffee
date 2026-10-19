@@ -1,0 +1,33 @@
+/* 1. Altera o box-sizing para incluir padding e borda no cálculo de tamanho */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Zera margens padrão imprevisíveis que causam scroll horizontal ou desalinhamento */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Melhora a altura de linha e a renderização do corpo da página */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Garante que mídias não estourem os limites do container */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Faz elementos de formulário herdarem a tipografia global */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 6. Evita que textos longos quebrem o layout */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
